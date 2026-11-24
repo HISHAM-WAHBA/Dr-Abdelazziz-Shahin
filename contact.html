@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>الاتصال - دكتور محمد قاسم</title>
+    <title>اتصل بنا - أ.د/ عبد العزيز شاهين</title>
     <!-- favicon -->
     <link rel=icon href=favicon.ico sizes="20x20" type="image/png">
     <!-- animate -->
@@ -24,7 +24,8 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- responsive Stylesheet -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/site-fixes.css">
 
 </head>
 
@@ -46,7 +47,7 @@
     <div class="search-popup" id="search-popup">
         <form action="index.html" class="search-form">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
+                <input type="text" class="form-control" placeholder="ابحث...">
             </div>
             <button class="close-btn border-none"><i class="fas fa-times"></i></button>
         </form>
@@ -60,7 +61,7 @@
                             <div class="left-contnet">
                                 <div class="social-link">
                                     <ul>
-                                        <li>Follow On:</li>
+                                        <li>تابعنا على:</li>
                                         <li><a href="https://www.facebook.com/prof.dr.mohamed.kassem"><i class="far fa-facebook-f"></i></a></li>
                                         <li><a href="https://www.youtube.com/channel/UCoLaptMcXZ1Suj3_3LiUXSQ"><i class="fab fa-youtube"></i></a></li>
                                         <li><a href="https://www.instagram.com/prof.dr.mohamed.kassem"><i class="fab fa-instagram"></i></a></li>
@@ -70,12 +71,12 @@
                             </div>
                             <div class="right-contnet">
                                 <ul class="info-items">
-                                    <li><a href="#"><i class="far fa-clock"></i>Sat - Wed: 02.00PM - 05.00 PM</a></li>
+                                    <li><a href="#"><i class="far fa-clock"></i>السبت - الأربعاء: ٢م - ٥م</a></li>
                                     <li><a href="mailto:dr_m_kassem@yahoo.com"><i class="flaticon-communications"></i> dr_m_kassem@yahoo.com</a></li>
                                 </ul>
                                 
                                 <div class="btn-wrapper">
-                                    <a href="mailto:dr_m_kassem@yahoo.com" class="appointment-btn">Make an appointment <i class="fas fa-long-arrow-alt-right"></i></a>
+                                    <a href="mailto:dr_m_kassem@yahoo.com" class="appointment-btn">احجز موعداً <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -88,31 +89,19 @@
             <div class="container nav-container">
                 <div class="responsive-mobile-menu">
                     <div class="logo-wrapper">
-                        <a href="index.html" class="logo">
-                            <img src="assets/img/logo.png" alt="">
-                        </a>
+                        <a href="index.html" class="text-logo">أ.د/ عبد العزيز شاهين<span>نساء وتوليد</span></a>
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bizcoxx_main_menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bizcoxx_main_menu">
-                    <ul class="navbar-nav">
-                       
-                             <li><font face="Droid Arabic Kufi"><a href="contact.html">
-								<span style="font-size: 11pt">الأتصال</span></a></font></li>
-
-                                                
-                        </li>
-                        <li><font face="Droid Arabic Kufi"><a href="about.html">
-						<span style="font-size: 11pt">عنا</span></a></font></li>
-                         <li><font face="Droid Arabic Kufi"><a href="services.html">
-							<span style="font-size: 11pt">خدمات</span></a></font></li>
-                        </li>
-                        
-                        </li>
-                        <li><font face="Droid Arabic Kufi"><a href="index.html">
-						<span style="font-size: 11pt">الرئيسية</span></a></font></li>
+                                        <ul class="navbar-nav">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="about.html">عن العيادة</a></li>
+                        <li><a href="blog.html">المدونة</a></li>
+                        <li class="active"><a href="contact.html">اتصل بنا</a></li>
                     </ul>
                 </div>
                 <div class="nav-right-content">
@@ -161,7 +150,7 @@
                 <div class="col-lg-5">
                     <div class="contact-inner-area bg-litewhite">
                         <div class="section-title">
-                            <h4 class="title">We are available <span>24/7</span> anyway
+                            <h4 class="title">نحن هنا لمساعدتك <span>على مدار الساعة</span>
                             </h4>
                         </div>
                         <div class="single-contact-item">
@@ -204,31 +193,31 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-form style-01">
-                        <form action="request.html" id="contact_page_form" class="contact-page-form" novalidate="novalidate">
+                        <form action="contact.php" id="contact_page_form" class="contact-page-form" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="name" placeholder="Name" class="form-control" required="" aria-required="true">
+                                        <input type="text" name="name" placeholder="الاسم" class="form-control" required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="phone" placeholder="Phone" class="form-control" required="" aria-required="true">
+                                        <input type="text" name="phone" placeholder="رقم الهاتف" class="form-control" required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="E-mail" class="form-control" required="" aria-required="true">
+                                        <input type="email" name="email" placeholder="البريد الإلكتروني" class="form-control" required="" aria-required="true">
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea name="msg" id="msg" cols="1" rows="4" placeholder="Send Message"></textarea>
+                                        <textarea name="msg" id="msg" cols="1" rows="4" placeholder="اكتب رسالتك"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="btn-wrapper">
-                                        <button type="submit" class="boxed-btn">Submit Message</button>
+                                        <button type="submit" class="boxed-btn">إرسال الرسالة</button>
                                     </div>
                                 </div>
                             </div>
@@ -247,8 +236,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget">
                             <div class="about_us_widget">
-                                <a href="index.html" class="footer-logo"> <img src="assets/img/logo-02.png" alt="footer logo"></a>
-                                <p> </p>
+                                <a href="index.html" class="footer-logo text-logo">أ.د/ عبد العزيز شاهين<span>نساء وتوليد</span></a>
+                                
                                 <ul class="contact_info_list">
                                     <li class="single-info-item">
                                         <div class="icon">
@@ -277,69 +266,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-title" style="text-align: right">
-							<font face="Droid Arabic Kufi">سيدي بشر</font></h4>
-                            <ul>
-                                <li style="text-align: right">
-								<font face="Droid Arabic Kufi"><a>شارع العيسوي – سيدي بشر بحري - الأسكندرية
-</a></font></li>
-                                <li style="text-align: right">
-								<font face="Droid Arabic Kufi"><a ">الأحد و الثلاثاء من ٢م الي ٥م
-</a></font></li>
-                                
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
-                        <div class="footer-widget widget widget_nav_menu">
-                            <h4 class="widget-title" style="text-align: right">
-							<font face="Droid Arabic Kufi">محطة الرمل</font></h4>
-                            <ul>
-                                <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a >  شارع كلية الطب – محطة الرمل - الأسكندرية </a></font></li>
-                                <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > السبت و الأثنين و الأربعاء من ٢م الي ٥م </a></font></li>
-                                
-							
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                                        <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title" style="text-align: right">
+                                <font face="Droid Arabic Kufi">سيدي بشر</font>
+                            </h4>
+                            <ul>
+                                <li style="text-align: right">12 شارع العيسوي – سيدي بشر بحري - الأسكندرية</li>
+                                <li style="text-align: right">الأحد والثلاثاء من ٢م إلى ٥م</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-widget widget widget_nav_menu">
+                            <h4 class="widget-title" style="text-align: right">
+                                <font face="Droid Arabic Kufi">محطة الرمل</font>
+                            </h4>
+                            <ul>
+                                <li style="text-align: right">8 شارع كلية الطب – محطة الرمل - الأسكندرية</li>
+                                <li style="text-align: right">السبت والأثنين والأربعاء من ٢م إلى ٥م</li>
+                            </ul>
+                        </div>
+                    </div>
+<div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-widget widget widget_nav_menu">
                             <h4 class="widget-title" style="text-align: right">
 							<font face="Droid Arabic Kufi">التخصصات</font></h4>
-                            <ul style="text-align: right">
-
-
-														 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > جراحات اورام البنكرياس </a></font></li>
-								
-								 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > جراحات اورام القنوات المراريه </a></font></li>
-								
-								 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > الكشف المبكر لاورام البنكرياس و القنوات المراريه </a></font></li>
-								
-								 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > جراحات الجهاز الهضمى و المناظير </a></font></li>
-								
-								 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > جراحات القنوات المراريه </a></font></li>
-								
-								 <li>
-								<p style="text-align: right">
-								<font face="Droid Arabic Kufi"><a > جراحات المراره </a></font></li>
-																                          
+                            <ul style="text-align: right">
+                                <li><a href="services-details.html">متابعة الحمل والولادة</a></li>
+                                <li><a href="services-details.html">الولادة القيصرية</a></li>
+                                <li><a href="services-details.html">جراحات الرحم والمبيض</a></li>
+                                <li><a href="services-details.html">الحقن المجهري وأطفال الأنابيب</a></li>
+                                <li><a href="services-details.html">تنظيم الأسرة</a></li>
+                                <li><a href="services-details.html">الكشف المبكر عن سرطان عنق الرحم والثدي</a></li>
+                                <li><a href="services-details.html">مناظير الرحم</a></li>
+                                <li><a href="services-details.html">علاج العقم</a></li>
                             </ul>
                         </div>
                     </div>
@@ -351,8 +312,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright-area-inner">
-                            &copy; Copyright 2021, All Rights Reserved &nbsp;|&nbsp; <a href="http://www.richardelhaj.media" target="_blank">by 
-							<font color="#FDFDFE">Richard Elhaj Media</font></a><font color="#FDFDFE"></a></font>
+                            &copy; 2026 أ.د/ عبد العزيز شاهين. جميع الحقوق محفوظة.
                         </div>
                     </div>
                 </div>

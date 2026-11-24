@@ -1,0 +1,120 @@
+/* ==========================================================
+   site-fixes.css — إصلاحات البراندنج والعربي (أ.د/ عبد العزيز شاهين)
+   يُحمّل بعد responsive.css
+   ========================================================== */
+
+/* خط Droid Arabic Kufi المحلي */
+@font-face {
+  font-family: "Droid Arabic Kufi";
+  src: url("../fonts/ArbFONTS-Droid.Arabic.Kufi_DownloadSoftware.iR.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Droid Arabic Kufi";
+  src: url("../fonts/ArbFONTS-Droid.Arabic.Kufi_.Bold_DownloadSoftware.iR.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html[lang="ar"] body,
+font[face="Droid Arabic Kufi"] {
+  font-family: "Droid Arabic Kufi", "Roboto", sans-serif;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6,
+html[lang="ar"] .title {
+  font-family: "Droid Arabic Kufi", "Montserrat", sans-serif;
+}
+
+/* اللوجو النصي بدل صورة عليها الاسم القديم */
+.text-logo {
+  display: inline-block;
+  color: var(--secondary-color, #1d2f3c);
+  font-family: "Droid Arabic Kufi", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  padding: 10px 0;
+  white-space: nowrap;
+}
+.text-logo span {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--main-color-one, #e92859);
+}
+.text-logo:hover,
+.text-logo:hover span { color: var(--main-color-one, #e92859); text-decoration: none; }
+.footer-logo.text-logo {
+  color: #ffffff;
+  font-size: 22px;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.footer-logo.text-logo span { color: #c9cdd2; font-size: 13px; }
+
+/* ضبط اتجاه النصوص والأيقونات */
+html[dir="rtl"] .topbar-inner,
+html[dir="rtl"] .navbar-collapse,
+html[dir="rtl"] .navbar-nav,
+html[dir="rtl"] .navbar-nav li,
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .contact-inner-area,
+html[dir="rtl"] .request-page-form,
+html[dir="rtl"] .comment-form,
+html[dir="rtl"] .blog-details-item,
+html[dir="rtl"] .widget-area {
+  text-align: right;
+}
+html[dir="rtl"] input.form-control,
+html[dir="rtl"] textarea.form-control {
+  text-align: right;
+}
+html[dir="rtl"] .contact_info_list li.single-info-item .icon {
+  right: 0;
+  left: auto;
+}
+html[dir="rtl"] .contact_info_list li.single-info-item .details {
+  margin-right: 30px;
+  margin-left: 0;
+}
+html[dir="rtl"] .page-list li {
+  display: inline-block;
+}
+html[dir="rtl"] .social-link ul li {
+  display: inline-block;
+}
+
+/* فيديوهات متجاوبة داخل كاروسيل الفيديو */
+.video-item {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.video-item iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 230px;
+  border: 0;
+}
+@media (max-width: 991px) {
+  .video-item { width: calc(50% - 20px); }
+}
+@media (max-width: 600px) {
+  .video-item { width: 100%; margin: 8px 0; }
+  .video-item iframe { height: 220px; }
+}

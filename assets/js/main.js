@@ -133,7 +133,7 @@
             $TestimonialCarousel.owlCarousel({
                 loop: true,
                 autoplay: true, //true if you want enable autoplay
-                autoPlayTimeout: 1000,
+                autoPlayTimeout: 5000,
                 margin: 30,
                 dots: true,
                 nav: false,
@@ -173,7 +173,7 @@
             $TestimonialCarousel.owlCarousel({
                 loop: true,
                 autoplay: true, //true if you want enable autoplay
-                autoPlayTimeout: 1000,
+                autoPlayTimeout: 5000,
                 margin: 30,
                 dots: true,
                 nav: true,
@@ -213,7 +213,7 @@
             $headerCarousel.owlCarousel({
                 loop: true,
                 autoplay: true, //true if you want enable autoplay
-                autoPlayTimeout: 1000,
+                autoPlayTimeout: 5000,
                 margin: 30,
                 dots: true,
                 nav: true,
@@ -264,13 +264,58 @@
             bodyOvrelay.removeClass('active');
             searchPopup.removeClass('active');
         });
-        $(document).on('click', '#search', function(e) {
-            e.preventDefault();
-            searchPopup.addClass('active');
-            bodyOvrelay.addClass('active');
-        });
-
-
+        $(document).on('click', '#search', function(e) {
+            e.preventDefault();
+            searchPopup.addClass('active');
+            bodyOvrelay.addClass('active');
+        });
+
+        /*------------------------------
+            Quick contact form (homepage)
+          ------------------------------*/
+        $('#quick_contact_form').on('submit', function(e) {
+            e.preventDefault();
+            var $form = $(this);
+            var $btn = $form.find('button[type="submit"]');
+            var email = $form.find('[name="email"]').val().trim();
+            var phone = $form.find('[name="phone"]').val().trim();
+            var city = $form.find('[name="city"]').val().trim();
+
+            $form.find('.alert').remove();
+
+            if (!email || !phone || !city) {
+                $form.prepend('<div class="alert alert-danger">يرجى تعبئة جميع الحقول.</div>');
+                return;
+            }
+
+            var label = $form.find('[name="name"]').val();
+            $form.find('#quick_msg').val(label + '\nالمدينة: ' + city + '\nرقم الهاتف: ' + phone);
+            $btn.prop('disabled', true);
+
+            $.ajax({
+                type: 'POST',
+                url: 'contact.php',
+                data: $form.serialize(),
+                dataType: 'json',
+                success: function(res) {
+                    $form.find('.alert').remove();
+                    var cls = (res.type === 'success') ? 'alert-success' : 'alert-danger';
+                    $form.prepend('<div class="alert ' + cls + '">' + res.msg + '</div>');
+                    if (res.type === 'success') {
+                        $form[0].reset();
+                    }
+                },
+                error: function() {
+                    $form.find('.alert').remove();
+                    $form.prepend('<div class="alert alert-danger">تعذر إرسال الطلب. يرجى المحاولة لاحقاً.</div>');
+                },
+                complete: function() {
+                    $btn.prop('disabled', false);
+                }
+            });
+        });
+
+
     });
 
 
